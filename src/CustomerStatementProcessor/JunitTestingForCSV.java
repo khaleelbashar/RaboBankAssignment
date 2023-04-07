@@ -87,7 +87,7 @@ public class JunitTestingForCSV {
 
 	@Parameters
 	public static Collection testCSV() throws IOException {
-		return fetchDataFromCsv("C:/Basha/records.csv");
+		return fetchDataFromCsv(new File("").getAbsolutePath()+"/src/CustomerStatementProcessor/records.csv");
 	}
 
 	public static Collection<String[]> fetchDataFromCsv(String csvfileName) throws IOException {
@@ -153,6 +153,8 @@ public class JunitTestingForCSV {
 				System.out.println(
 						"end balance is not macthing with the sum of the Startbalance and mutation and failed Reference No="
 								+ referencenumber);
+			}else if (sumofBalaneAndMutation != BigDecimal.ZERO && endbalance.equals(sumofBalaneAndMutation)) {
+				assertFalse("endbalance", true);
 			}
 		}
 	}
