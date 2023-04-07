@@ -46,7 +46,7 @@ public class Validations {
 		String[] customerStatements = null;
 		Integer refNo = 0;
 		try {
-			BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("C:/Basha/" + fileName)));
+			BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(new File("").getAbsolutePath()+"/src/CustomerStatementProcessor/" + fileName)));
 			while ((line = bufferedReader.readLine()) != null) {
 				customerStatements = line.split(splitBy);
 
@@ -115,7 +115,7 @@ public class Validations {
 			List<Integer> listOfTransactionRefernces = new ArrayList<Integer>();
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(new File("C:/Basha/" + fileName));
+			Document doc = db.parse(new File(new File("").getAbsolutePath()+"/src/CustomerStatementProcessor/"+ fileName));
 			doc.getDocumentElement().normalize();
 			NodeList nodeList = doc.getElementsByTagName("record");
 
