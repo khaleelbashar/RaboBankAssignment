@@ -25,7 +25,7 @@ public class Validations {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please Enter File name ");
+		System.out.println("Please Enter File name");
 
 		String fileName = scanner.nextLine();
 
