@@ -100,7 +100,7 @@ public class Validations {
 			}
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Please Enter the file name that is avilable in the system");
 		} catch (NumberFormatException e) {
 			System.out.println("Please correct excel sheet data properly");
 		} catch (ArrayIndexOutOfBoundsException e) {
@@ -187,7 +187,7 @@ public class Validations {
 		} catch (ParserConfigurationException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Please Enter the file name that is avilable in the system");
 		} catch (NumberFormatException e) {
 			System.out.println("Please enter the excel sheet data properly");
 		}
