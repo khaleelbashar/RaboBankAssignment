@@ -95,7 +95,7 @@ public class JunitTestingForXml {
 
 	@Parameters
 	public static Collection testXML() throws IOException, SAXException, ParserConfigurationException {
-		return fetchDataFromXml("C:/Basha/records.xml");
+		return fetchDataFromXml(new File("").getAbsolutePath()+"/src/CustomerStatementProcessor/records.xml");
 	}
 
 	public static Collection<String[]> fetchDataFromXml(String xmlfileName)
@@ -171,6 +171,8 @@ public class JunitTestingForXml {
 				System.out.println(
 						"end balance is not macthing with the sum of the Startbalance and mutation and failed Reference No="
 								+ referencenumber);
+			}else if (sumofBalaneAndMutation != BigDecimal.ZERO && endbalance.equals(sumofBalaneAndMutation)) {
+				assertFalse("endbalance", true);
 			}
 		}
 	}
